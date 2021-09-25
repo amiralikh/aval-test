@@ -27,6 +27,6 @@ class TicketRepo
 
     public function getTickets()
     {
-        return Ticket::with('seat')->get()->groupBy('seat_id');
+        return Ticket::with('seat')->orderByDesc('seat_id')->get()->groupBy('seat_id');
     }
 }

@@ -1,166 +1,213 @@
 {
-	"info": {
-		"_postman_id": "f7f75a56-c85c-4a7b-ad37-7c6babe7d0c7",
-		"name": "aval - test",
-		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
-	},
-	"item": [
-		{
-			"name": "show list of movies",
-			"request": {
-				"method": "GET",
-				"header": [
-					{
-						"key": "Accept",
-						"value": "application/json",
-						"type": "text"
-					}
-				],
-				"url": {
-					"raw": "aval-test.mac/api/movies",
-					"host": [
-						"aval-test",
-						"mac"
-					],
-					"path": [
-						"api",
-						"movies"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "show available seats",
-			"request": {
-				"method": "POST",
-				"header": [
-					{
-						"key": "Accept",
-						"value": "application/json",
-						"type": "text"
-					}
-				],
-				"body": {
-					"mode": "formdata",
-					"formdata": [
-						{
-							"key": "movie_id",
-							"value": "1",
-							"type": "text"
-						}
-					]
-				},
-				"url": {
-					"raw": "aval-test.mac/api/movies/available-seats",
-					"host": [
-						"aval-test",
-						"mac"
-					],
-					"path": [
-						"api",
-						"movies",
-						"available-seats"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "login",
-			"request": {
-				"method": "POST",
-				"header": [
-					{
-						"key": "Accept",
-						"value": "application/json",
-						"type": "text"
-					}
-				],
-				"body": {
-					"mode": "formdata",
-					"formdata": [
-						{
-							"key": "mobile",
-							"value": "09215880279",
-							"type": "text"
-						},
-						{
-							"key": "password",
-							"value": "123456",
-							"type": "text"
-						}
-					]
-				},
-				"url": {
-					"raw": "aval-test.mac/api/login",
-					"host": [
-						"aval-test",
-						"mac"
-					],
-					"path": [
-						"api",
-						"login"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "reserva a seat",
-			"request": {
-				"auth": {
-					"type": "bearer",
-					"bearer": [
-						{
-							"key": "token",
-							"value": "5|Ot5yjwlqalu9Dk08sqhTf3JQsoGNYyre69QEbKKb",
-							"type": "string"
-						},
-						{
-							"key": "password",
-							"value": "{{Token}}",
-							"type": "string"
-						}
-					]
-				},
-				"method": "POST",
-				"header": [
-					{
-						"key": "Accept",
-						"value": "application/json",
-						"type": "text"
-					}
-				],
-				"body": {
-					"mode": "formdata",
-					"formdata": [
-						{
-							"key": "movie_id",
-							"value": "1",
-							"type": "text"
-						},
-						{
-							"key": "seat_id",
-							"value": "3",
-							"type": "text"
-						}
-					]
-				},
-				"url": {
-					"raw": "aval-test.mac/api/movies/reservation",
-					"host": [
-						"aval-test",
-						"mac"
-					],
-					"path": [
-						"api",
-						"movies",
-						"reservation"
-					]
-				}
-			},
-			"response": []
-		}
-	]
+    "info": {
+        "_postman_id": "f7f75a56-c85c-4a7b-ad37-7c6babe7d0c7",
+        "name": "aval - test",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+    },
+    "item": [
+        {
+            "name": "show list of movies",
+            "request": {
+                "method": "GET",
+                "header": [
+                    {
+                        "key": "Accept",
+                        "value": "application/json",
+                        "type": "text"
+                    }
+                ],
+                "url": {
+                    "raw": "aval-test.mac/api/movies",
+                    "host": [
+                        "aval-test",
+                        "mac"
+                    ],
+                    "path": [
+                        "api",
+                        "movies"
+                    ]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "show available seats",
+            "request": {
+                "method": "POST",
+                "header": [
+                    {
+                        "key": "Accept",
+                        "value": "application/json",
+                        "type": "text"
+                    }
+                ],
+                "body": {
+                    "mode": "formdata",
+                    "formdata": [
+                        {
+                            "key": "movie_id",
+                            "value": "1",
+                            "type": "text"
+                        }
+                    ]
+                },
+                "url": {
+                    "raw": "aval-test.mac/api/movies/available-seats",
+                    "host": [
+                        "aval-test",
+                        "mac"
+                    ],
+                    "path": [
+                        "api",
+                        "movies",
+                        "available-seats"
+                    ]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "login",
+            "request": {
+                "method": "POST",
+                "header": [
+                    {
+                        "key": "Accept",
+                        "value": "application/json",
+                        "type": "text"
+                    }
+                ],
+                "body": {
+                    "mode": "formdata",
+                    "formdata": [
+                        {
+                            "key": "mobile",
+                            "value": "09215880279",
+                            "type": "text"
+                        },
+                        {
+                            "key": "password",
+                            "value": "123456",
+                            "type": "text"
+                        }
+                    ]
+                },
+                "url": {
+                    "raw": "aval-test.mac/api/login",
+                    "host": [
+                        "aval-test",
+                        "mac"
+                    ],
+                    "path": [
+                        "api",
+                        "login"
+                    ]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "reserva a seat",
+            "request": {
+                "auth": {
+                    "type": "bearer",
+                    "bearer": [
+                        {
+                            "key": "token",
+                            "value": "5|Ot5yjwlqalu9Dk08sqhTf3JQsoGNYyre69QEbKKb",
+                            "type": "string"
+                        },
+                        {
+                            "key": "password",
+                            "value": "{{Token}}",
+                            "type": "string"
+                        }
+                    ]
+                },
+                "method": "POST",
+                "header": [
+                    {
+                        "key": "Accept",
+                        "value": "application/json",
+                        "type": "text"
+                    }
+                ],
+                "body": {
+                    "mode": "formdata",
+                    "formdata": [
+                        {
+                            "key": "movie_id",
+                            "value": "4",
+                            "type": "text"
+                        },
+                        {
+                            "key": "seat_id",
+                            "value": "3",
+                            "type": "text"
+                        }
+                    ]
+                },
+                "url": {
+                    "raw": "aval-test.mac/api/movies/reservation",
+                    "host": [
+                        "aval-test",
+                        "mac"
+                    ],
+                    "path": [
+                        "api",
+                        "movies",
+                        "reservation"
+                    ]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "reserve statistics",
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "request": {
+                "auth": {
+                    "type": "bearer",
+                    "bearer": [
+                        {
+                            "key": "token",
+                            "value": "5|Ot5yjwlqalu9Dk08sqhTf3JQsoGNYyre69QEbKKb",
+                            "type": "string"
+                        },
+                        {
+                            "key": "password",
+                            "value": "{{Token}}",
+                            "type": "string"
+                        }
+                    ]
+                },
+                "method": "GET",
+                "header": [
+                    {
+                        "key": "Accept",
+                        "value": "application/json",
+                        "type": "text"
+                    }
+                ],
+                "body": {
+                    "mode": "formdata",
+                    "formdata": []
+                },
+                "url": {
+                    "raw": "aval-test.mac/api/statistics",
+                    "host": [
+                        "aval-test",
+                        "mac"
+                    ],
+                    "path": [
+                        "api",
+                        "statistics"
+                    ]
+                }
+            },
+            "response": []
+        }
+    ]
 }

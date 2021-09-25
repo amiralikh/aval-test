@@ -19,4 +19,14 @@ class TicketRepo
             'seat_id' => $seat
         ]);
     }
+
+
+    /**
+     * @return \Illuminate\Database\Eloquent\Builder[]|\Illuminate\Database\Eloquent\Collection
+     */
+
+    public function getTickets()
+    {
+        return Ticket::with('seat')->get()->groupBy('seat_id');
+    }
 }
